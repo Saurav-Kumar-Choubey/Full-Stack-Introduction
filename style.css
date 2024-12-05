@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #007BFF;
+    --hover-color: #0056b3;
+    --background-color: #f4f4f4;
+    --form-background: #fff;
+    --border-radius: 8px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --transition-duration: 0.3s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: var(--form-background);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: border-color var(--transition-duration);
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color var(--transition-duration);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+#formMessage {
+    margin-top: 15px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+}
+
+#formMessage.visible {
+    opacity: 1;
+}
